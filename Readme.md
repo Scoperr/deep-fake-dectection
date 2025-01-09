@@ -13,4 +13,12 @@ To run using Docker:
       docker run -v "path_to_dataFolder:/app/data" -v "path_to_resultsFolder:/app/results" tarunam172/altfreezing-image2 python main.py --input_path /app/data/your_test_video_name.mp4 --output_path /app/results --info_path /app/method_info.json --device cpu --checkpoint_path /app/checkpoints/model.pth
   6. Once it is run, result.json file will be created in results folder.
 
+To run in Google colab:
+  Connect to GPU
+  1. Install python 3.9:  !sudo apt-get install python3.9 python3.9-distutils python3.9-dev -y
+  2. Get pip and install:  !wget https://bootstrap.pypa.io/get-pip.py and !python3.9 get-pip.py
+  3. Clone the github:  !git clone https://github.com/Scoperr/deep-fake-dectection
+  4. Navigate to deep-fake-detection folder:  %cd deep-fake-dectection
+  5. Install requirements.txt:  !python3.9 -m pip install -r requirements.txt
+  6. Use this cmd:  !python3.9 main.py --input_path data/test_video_name --output_path results --info_path method_info.json --device cuda --checkpoint_path checkpoints/model.pth
 
